@@ -1,8 +1,9 @@
-package data;
+package data.Stack;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
+
 
 public class ValidParenthsis {
     void main() {
@@ -19,29 +20,6 @@ public class ValidParenthsis {
         System.out.println("\"" + s4 + "\" is valid: " + isValid(s4)); // Output: true
     }
 
-   /* public static boolean isValid(String s) {
-        if (s == null || s.length() == 0) {
-            return true;
-        }
-        Stack<Character> stack = new Stack<>();
-
-        Map<Character, Character> map = new HashMap<>();
-        map.put(')', '(');
-        map.put('}', '{');
-        map.put(']', '[');
-
-        for (char ch : s.toCharArray()) {
-            if (map.containsKey(ch)) {
-                char el = stack.isEmpty() ? '#' : stack.pop();
-                if (el != map.get(ch))
-                    return false;
-            } else
-                stack.push(ch);
-        }
-
-
-        return true;
-    }*/
 
     public static boolean isValid(String s) {
         if (s == null || s.length() == 0)
@@ -60,6 +38,26 @@ public class ValidParenthsis {
                 st.push(c);
         }
         return true;
+    }
+
+
+    public static boolean is(String s){
+        Map<Character, Character> map= new HashMap<>();
+        Stack<Character> st=new Stack<>();
+        map.put('}','{');
+        map.put(']','[');
+        map.put(')','(');
+
+        for(char c:s.toCharArray()){
+            if(map.containsKey(c)){
+                char ch=map.isEmpty()? '#':st.pop();
+                if(ch !=map.get(c)) return false;
+                else st.push(c);
+            }
+        }
+        return false;
+
+
     }
 
 }

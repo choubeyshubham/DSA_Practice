@@ -1,4 +1,4 @@
-package data;
+package data.Arrays;
 
 public class MaximumSubArray {
 

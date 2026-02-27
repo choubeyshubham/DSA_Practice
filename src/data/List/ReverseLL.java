@@ -1,4 +1,4 @@
-package data;
+package data.List;
 
 public class ReverseLL {
 
@@ -19,7 +19,6 @@ public class ReverseLL {
         Node head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
-
         head = reverse(head);
 
         while (head != null) {
@@ -33,12 +32,12 @@ public class ReverseLL {
         if(head==null|| head.next==null){
             return head;
         }
-
         Node newHead=reverse(head.next);
         head.next.next=head;
         head.next=null;
         return newHead;
     }
+
 
 
 }

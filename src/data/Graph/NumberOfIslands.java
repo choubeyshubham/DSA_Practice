@@ -1,4 +1,4 @@
-package data;
+package data.Graph;
 
 public class NumberOfIslands {
     /*

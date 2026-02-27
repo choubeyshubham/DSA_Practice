@@ -1,4 +1,4 @@
-package data;
+package data.String;
 
 public class Palindrome {
 

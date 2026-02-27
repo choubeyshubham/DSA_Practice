@@ -1,4 +1,4 @@
-package data;
+package data.List;
 
 public class RemoveNthFromEnd {
 

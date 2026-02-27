@@ -1,6 +1,5 @@
-package data;
+package data.Tree;
 
-import java.util.List;
 
 public class LevelOrderTraversal {
 

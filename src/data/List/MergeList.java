@@ -1,6 +1,4 @@
-package data;
-
-import java.util.List;
+package data.List;
 
 public class MergeList {
 
