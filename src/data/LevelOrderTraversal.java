@@ -19,18 +19,18 @@ public class LevelOrderTraversal {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        List<List<Integer>> result = levelOrder(root);
-        System.out.println(result);
+//        List<List<Integer>> result = levelOrder(root);
+//        System.out.println(result);
 
 
     }
 
 
-    public static List<List<Integer>> levelOrder(TreeNode root){
-
-
-
-    }
+//    public static List<List<Integer>> levelOrder(TreeNode root){
+//
+//
+//
+//    }
 
 
 
