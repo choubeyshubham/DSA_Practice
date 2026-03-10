@@ -29,7 +29,8 @@ public class MoveAllZeroes {
         for (int a : arr)
             if (a != 0)
                 arr[index++] = a;
-        while (index < arr.length) arr[index++] = 0;
+        while (index < arr.length)
+            arr[index++] = 0;
         return arr;
     }
 

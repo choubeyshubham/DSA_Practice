@@ -11,6 +11,7 @@ public class TwoSum {
 
         int[] arr1 = {0, -1, 2, -3, 1};
         int[] arr2 = {3, 2, 4};
+
         int target = -2;
         System.out.println(Arrays.toString(twoSumTwoPointer(arr1, target)));
 
@@ -44,7 +45,8 @@ public class TwoSum {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             int comp = target - arr[i];
-            if (map.containsKey(comp)) return new int[]{map.get(comp), i};
+            if (map.containsKey(comp))
+                return new int[]{map.get(comp), i};
             map.put(arr[i], i);
         }
         return new int[]{-1, -1};
