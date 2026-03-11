@@ -13,8 +13,6 @@ public class CharacterCount {
         System.out.println(getCh(s));
 
 
-
-
     }
 
     public static String getCh(String s){
@@ -31,6 +29,7 @@ public class CharacterCount {
         }
         return sb.toString();
     }
+
 
 
 
