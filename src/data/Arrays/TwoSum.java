@@ -10,10 +10,10 @@ public class TwoSum {
     void main() {
 
         int[] arr1 = {0, -1, 2, -3, 1};
-        int[] arr2 = {3, 2, 4};
+//        int[] arr2 = {3, 2, 4};
 
         int target = -2;
-        System.out.println(Arrays.toString(twoSumTwoPointer(arr1, target)));
+        System.out.println(Arrays.toString(two1(arr1, target)));
 
     }
 
@@ -46,25 +46,36 @@ public class TwoSum {
         for (int i = 0; i < arr.length; i++) {
             int comp = target - arr[i];
             if (map.containsKey(comp))
-                return new int[]{map.get(comp), i};
+                return new int[]{arr[map.get(comp)], arr[i]};
             map.put(arr[i], i);
         }
         return new int[]{-1, -1};
     }
 
 
-    public static int[] two(int[] arr, int t) {
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        int left = 0;
-        int right = arr.length - 1;
-        while (left < right) {
-            int r = arr[left] + arr[right];
-            if (r == t) return new int[]{left, right};
-            else if (r < t) left++;
-            else right--;
+    public static int[] two1(int[] arr, int t) { //{0, -1, 2, -3, 1};
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            int res = t - arr[i];
+            if (map.containsKey(res)) {
+                return new int[]{arr[map.get(res)], arr[i]};
+            }
+            map.put(arr[i], i);
         }
         return new int[]{-1, -1};
+    }
+    public static int[] two2(int[] arr,int t){
+        Arrays.sort(arr);
+        int left=0;
+        int right=arr.length-1;
+        while(left<right){
+            int res=arr[right]+arr[left];
+            if(res==t) return new int[]{arr[left], arr[right]};
+            else if(res<t) left++;
+            else right--;
+        }
+        return new int[]{-1,-1};
     }
 
 
