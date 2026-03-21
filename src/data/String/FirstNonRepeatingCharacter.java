@@ -23,8 +23,21 @@ public class FirstNonRepeatingCharacter {
 
         System.out.println(value);
         System.out.println(method(s));
+//        System.out.println(s.charAt(firstUniqChar(s)));
 
 
+    }
+    public int firstUniqChar(String s) {
+        int[] freq = new int[256];
+        for (char c : s.toCharArray()) {
+            freq[c]++;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (freq[s.charAt(i)] == 1) {
+                return i;
+            }
+        }
+        return -1;
     }
 
 

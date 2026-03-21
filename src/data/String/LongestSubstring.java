@@ -23,14 +23,10 @@ public class LongestSubstring {
         int left = 0;
         for (int right = 0; right < s.length(); right++) {
             char ch = s.charAt(right);
-            if (arr[ch] != -1 && arr[ch] >= left) {
-                left = arr[ch] + 1;
-            }
+            if (arr[ch] != -1 && arr[ch] >= left) left = arr[ch] + 1;
             arr[ch] = right;
             len = Math.max(len, right - left + 1);
         }
-
-
         return len;
     }
 

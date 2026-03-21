@@ -10,18 +10,21 @@ public class RotateArray {
         int k=3;
 
 
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
 
-        rotateArray(arr,k);
+//        rotateArray(arr,k);
+
+        int[] arr2={1,2,3,4,5};
+        int k2=2;
+        System.out.println(Arrays.toString(rotateArray(arr2,k2)));
 
 
 
     }
 
 
-    public static void rotateArray(int[] arr,int k){
-
-         k %= arr.length;
+    public static int[] rotateArray(int[] arr,int k){
+        k %= arr.length;
         int n = arr.length-1;
         for(int i=0;i<k;i++){
             int last=arr[n];
@@ -30,10 +33,10 @@ public class RotateArray {
             }
             arr[0]=last;
         }
-
-        System.out.println(Arrays.toString(arr));
-
+//        System.out.println(Arrays.toString(arr));
+        return arr;
     }
+
 
 
 
