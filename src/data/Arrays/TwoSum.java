@@ -13,11 +13,11 @@ public class TwoSum {
 //        int[] arr2 = {3, 2, 4};
 
         int target = -2;
-        System.out.println(Arrays.toString(two1(arr1, target)));
+        System.out.println(Arrays.toString(twoHash(arr1, target)));
 
     }
 
-
+    //Brute Force
     public static int[] twoSum(int[] arr, int target) {
         int[] result = new int[2];
         for (int i = 0; i < arr.length; i++)
@@ -26,6 +26,7 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
+    //Optimal Solution
     public static int[] twoSumTwoPointer(int[] arr, int target) {
         Arrays.sort(arr);
         int left = 0;
@@ -40,7 +41,7 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
-
+    //HashMap
     public static int[] twoSumHashMap(int[] arr, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
@@ -51,32 +52,20 @@ public class TwoSum {
         }
         return new int[]{-1, -1};
     }
+//------------------------------------------------------------------------------------------------------
 
+ public static int[] twoHash(int[] arr,int t){
+        Map<Integer,Integer> map= new HashMap<>();
 
-    public static int[] two1(int[] arr, int t) { //{0, -1, 2, -3, 1};
-        Map<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            int res = t - arr[i];
-            if (map.containsKey(res)) {
-                return new int[]{arr[map.get(res)], arr[i]};
+        for(int i=0;i<arr.length;i++){
+            if(map.containsKey(t-arr[i])){
+            }else{
+                map.put(arr[i],1);
             }
-            map.put(arr[i], i);
-        }
-        return new int[]{-1, -1};
-    }
-    public static int[] two2(int[] arr,int t){
-        Arrays.sort(arr);
-        int left=0;
-        int right=arr.length-1;
-        while(left<right){
-            int res=arr[right]+arr[left];
-            if(res==t) return new int[]{arr[left], arr[right]};
-            else if(res<t) left++;
-            else right--;
         }
         return new int[]{-1,-1};
-    }
 
+ }
 
+//---------------------------------------------------------------------------------------
 }
