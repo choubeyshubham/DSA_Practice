@@ -4,9 +4,9 @@ public class RainWater {
 
 
     void main() {
-        int[] arr = {3, 0, 1, 0, 4, 0, 2};
-        int[] arr2 = {2, 1, 5, 3, 1, 0, 4};
-        System.out.println(rainWaterBrute(arr));
+        int[] arr = {3, 0, 1, 0, 4, 0, 2};//10
+        int[] arr2 = {2, 1, 5, 3, 1, 0, 4};//9
+//        System.out.println(rainWaterTwoPointer(arr2));
         System.out.println(rainWaterTwoPointer(arr2));
     }
 
@@ -20,29 +20,17 @@ public class RainWater {
             if (rmax <= lmax) {
                 res += Math.max(0, rmax - arr[right]);
                 rmax = Math.max(rmax, arr[right]);
-                right -= 1;
+                right --;
             } else {
                 res += Math.max(0, lmax - arr[left]);
                 lmax = Math.max(lmax, arr[left]);
-                left += 1;
+                left ++;
             }
         }
         return res;
     }
 
-   public static int rainWaterBrute(int[] arr) {
-        int res = 0;
-        for (int i = 0; i < arr.length; i++) {
-            int left = arr[i];
-            for (int j = 0; j < i; j++)
-                left = Math.max(left, arr[j]);
-            int right = arr[i];
-            for (int j = i+1; j < arr.length; j++)
-                right = Math.max(right, arr[j]);
-            res += Math.min(left, right) - arr[i];
-        }
-        return res;
-    }
+
 
 
 

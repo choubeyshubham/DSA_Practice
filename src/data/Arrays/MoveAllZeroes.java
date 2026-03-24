@@ -8,23 +8,14 @@ public class MoveAllZeroes {
 
         int[] arr = {1, 2, 0, 4, 3, 0, 5, 0};
 
-        System.out.println(Arrays.toString(move1(arr)));
+        System.out.println(Arrays.toString(move(arr)));
 
 
     }
 
-    public static int[] move0(int[] arr) {
-        int[] temp = new int[arr.length];
-        int index = 0;
-        for (int a : arr)
-            if (a != 0)
-                temp[index++] = a;
-        System.arraycopy(temp, 0, arr, 0, arr.length);
-        return temp;
-    }
 
 
-    public static int[] move1(int[] arr) {
+    public static int[] move(int[] arr) {
         int index = 0;
         for (int a : arr)
             if (a != 0)
@@ -33,6 +24,7 @@ public class MoveAllZeroes {
             arr[index++] = 0;
         return arr;
     }
+
 
 
 }
