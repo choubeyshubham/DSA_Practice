@@ -13,18 +13,10 @@ public class TwoSum {
 //        int[] arr2 = {3, 2, 4};
 
         int target = -2;
-        System.out.println(Arrays.toString(twoHash(arr1, target)));
+        System.out.println(Arrays.toString(t1(arr1, target)));
 
     }
 
-    //Brute Force
-    public static int[] twoSum(int[] arr, int target) {
-        int[] result = new int[2];
-        for (int i = 0; i < arr.length; i++)
-            for (int j = i + 1; j < arr.length; j++)
-                if (arr[i] + arr[j] == target) return new int[]{i, j};
-        return new int[]{-1, -1};
-    }
 
     //Optimal Solution
     public static int[] twoSumTwoPointer(int[] arr, int target) {
@@ -54,18 +46,17 @@ public class TwoSum {
     }
 //------------------------------------------------------------------------------------------------------
 
- public static int[] twoHash(int[] arr,int t){
-        Map<Integer,Integer> map= new HashMap<>();
-
-        for(int i=0;i<arr.length;i++){
-            if(map.containsKey(t-arr[i])){
-            }else{
-                map.put(arr[i],1);
-            }
+    public static int[] t1(int[] arr, int t) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length ; i++) {
+            if (map.containsKey(t - arr[i]))
+                return new int[]{arr[map.get(t-arr[i])], arr[i]};
+            map.put(i, 1);
         }
-        return new int[]{-1,-1};
+        return new int[]{-1, -1};
 
- }
+    }
+
 
 //---------------------------------------------------------------------------------------
 }
