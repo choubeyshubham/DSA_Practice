@@ -13,7 +13,7 @@ public class TwoSum {
 //        int[] arr2 = {3, 2, 4};
 
         int target = -2;
-        System.out.println(Arrays.toString(t1(arr1, target)));
+//        System.out.println(Arrays.toString(t1(arr1, target)));
 
     }
 
@@ -45,17 +45,6 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 //------------------------------------------------------------------------------------------------------
-
-    public static int[] t1(int[] arr, int t) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < arr.length ; i++) {
-            if (map.containsKey(t - arr[i]))
-                return new int[]{arr[map.get(t-arr[i])], arr[i]};
-            map.put(i, 1);
-        }
-        return new int[]{-1, -1};
-
-    }
 
 
 //---------------------------------------------------------------------------------------

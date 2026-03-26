@@ -9,7 +9,7 @@ public class CharacterCount {
 
     void main(){
 
-        String s="aabbcccdd";
+        String s="aabbcccdd";//a2b2c3
         System.out.println(getCh(s));
 
 
@@ -29,6 +29,8 @@ public class CharacterCount {
         }
         return sb.toString();
     }
+
+
 
 
 

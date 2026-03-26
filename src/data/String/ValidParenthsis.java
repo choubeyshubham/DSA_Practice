@@ -1,4 +1,4 @@
-package data.Stack;
+package data.String;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,24 +40,5 @@ public class ValidParenthsis {
         return true;
     }
 
-
-    public static boolean is(String s){
-        Map<Character, Character> map= new HashMap<>();
-        Stack<Character> st=new Stack<>();
-        map.put('}','{');
-        map.put(']','[');
-        map.put(')','(');
-
-        for(char c:s.toCharArray()){
-            if(map.containsKey(c)){
-                char ch=map.isEmpty()? '#':st.pop();
-                if(ch !=map.get(c)) return false;
-                else st.push(c);
-            }
-        }
-        return false;
-
-
-    }
 
 }

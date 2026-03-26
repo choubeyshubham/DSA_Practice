@@ -15,16 +15,28 @@ public class DuplicateCharacterInString {
 
     void main() {
         String s = "Learn Java Programming";
-//        method(s.replaceAll("\\s+", ""));
+        method(s.replaceAll("\\s+", "")); //a 4 r 3 g 2 m 2 n 2
 
 
-        s.chars().mapToObj(e->(char)e)
+//        s.chars().mapToObj(e->(char)e)
+//                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+//                .entrySet()
+//                .stream()
+//                .filter(e->e.getValue()>1)
+//                .map(Map.Entry::getKey)
+//                .forEach(System.out::print);
+
+
+        System.out.println("=======");
+
+        s.chars().mapToObj(c->(char)c)
                 .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
                 .entrySet()
                 .stream()
-                .filter(e->e.getValue()>1)
+                .filter(f->f.getValue()>1)
                 .map(Map.Entry::getKey)
                 .forEach(System.out::println);
+
 
 
     }
@@ -41,10 +53,11 @@ public class DuplicateCharacterInString {
         Set<Character> set = map.keySet();
         for (char c : set) {
             if (map.get(c) > 1)
-                System.out.println(c + " " + map.get(c));
+                System.out.print(c + " " + map.get(c)+" ");
         }
 
     }
+
 
 
 }
