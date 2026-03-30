@@ -14,7 +14,7 @@ public class DuplicateCharacterInString {
      */
 
     void main() {
-        String s = "Learn Java Programming";
+            String s = "Learn Java Programming";
         method(s.replaceAll("\\s+", "")); //a 4 r 3 g 2 m 2 n 2
 
 
@@ -27,17 +27,8 @@ public class DuplicateCharacterInString {
 //                .forEach(System.out::print);
 
 
+        System.out.println();
         System.out.println("=======");
-
-        s.chars().mapToObj(c->(char)c)
-                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
-                .entrySet()
-                .stream()
-                .filter(f->f.getValue()>1)
-                .map(Map.Entry::getKey)
-                .forEach(System.out::println);
-
-
 
     }
 

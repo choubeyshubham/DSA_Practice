@@ -1,9 +1,9 @@
-package data.String;
+package data.Stack;
+
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
 
 public class ValidParenthsis {
     void main() {
@@ -22,22 +22,22 @@ public class ValidParenthsis {
 
 
     public static boolean isValid(String s) {
-        if (s == null || s.length() == 0)
-            return true;
-        Stack<Character> st = new Stack<>();
+        if (s == null || s.length() == 0) return true;
         Map<Character, Character> map = new HashMap<>();
         map.put(')', '(');
         map.put('}', '{');
         map.put(']', '[');
-        for (char c : s.toCharArray()) {
-            if (map.containsKey(c)) {
-                char ch = map.isEmpty() ? '#' : st.pop();
-                if(ch!=map.get(c))
-                    return false;
-            }else
+        Stack<Character> st = new Stack<>();
+        for(char c:s.toCharArray()){
+            if(map.containsKey(c)){
+                if(map.isEmpty()||st.pop()!=map.get(c)) return false;
+            }else{
                 st.push(c);
+            }
         }
-        return true;
+
+
+        return st.isEmpty();
     }
 
 
