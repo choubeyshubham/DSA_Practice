@@ -1,7 +1,13 @@
 package data.DynamicPrograming;
 
 public class LongestIncreasingSubsequence {
-
+ //   Given an array, find the length of the longest increasing subsequence.
+//
+//            A subsequence does not need to be contiguous, but must be in order.
+//
+//    Input: [10, 9, 2, 5, 3, 7, 101, 18]
+//    Output: 4
+//    Explanation: LIS = [2, 3, 7, 101]
 
     void main() {
         int[] arr = {10, 9, 2, 5, 3, 7, 101, 18};

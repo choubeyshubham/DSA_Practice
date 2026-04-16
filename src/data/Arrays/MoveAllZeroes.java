@@ -5,12 +5,8 @@ import java.util.Arrays;
 public class MoveAllZeroes {
 
     void main() {
-
-        int[] arr = {1, 2, 0, 4, 3, 0, 5, 0};
-
+        int[] arr = {1, 2, 0, 4, 3, 0, 5, 0};//[1, 2, 4, 3, 5, 0, 0, 0]
         System.out.println(Arrays.toString(move(arr)));
-
-
     }
 
 
@@ -24,6 +20,7 @@ public class MoveAllZeroes {
             arr[index++] = 0;
         return arr;
     }
+
 
 
 

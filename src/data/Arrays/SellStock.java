@@ -5,7 +5,7 @@ public class SellStock {
     void main(){
         int[] price = {7, 1, 5, 3, 6, 4};
 
-        System.out.println(stock(price));
+        System.out.println(stock(price));//5
 
     }
 
@@ -22,6 +22,7 @@ public class SellStock {
         }
         return max;
     }
+
 
 
 

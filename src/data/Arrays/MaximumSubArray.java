@@ -2,7 +2,7 @@ package data.Arrays;
 
 public class MaximumSubArray {
     void main() {
-        int[] arr = {2, 3, -8, 7, -1, 2, 3};
+        int[] arr = {2, 3, -8, 7, -1, 2, 3};//11
         System.out.println(maxSumOpti(arr));// 11
     }
 

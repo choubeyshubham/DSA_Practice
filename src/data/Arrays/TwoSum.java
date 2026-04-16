@@ -13,7 +13,7 @@ public class TwoSum {
 //        int[] arr2 = {3, 2, 4};
 
         int target = -2;
-//        System.out.println(Arrays.toString(t1(arr1, target)));
+            System.out.println(Arrays.toString(twoSumTwoPointer(arr1, target)));//[-3, 1]
 
     }
 

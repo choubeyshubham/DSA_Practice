@@ -14,7 +14,7 @@ public class RotateArray {
 
 //        rotateArray(arr,k);
 
-        int[] arr2={1,2,3,4,5};
+        int[] arr2={1,2,3,4,5};//[4, 5, 1, 2, 3]
         int k2=2;
         System.out.println(Arrays.toString(rotateArray(arr2,k2)));
 

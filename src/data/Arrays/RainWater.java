@@ -4,7 +4,7 @@ public class RainWater {
 
 
     void main() {
-        int[] arr = {3, 0, 1, 0, 4, 0, 2};//10
+            int[] arr = {3, 0, 1, 0, 4, 0, 2};//10
         int[] arr2 = {2, 1, 5, 3, 1, 0, 4};//9
 //        System.out.println(rainWaterTwoPointer(arr));
         System.out.println(container(arr2));

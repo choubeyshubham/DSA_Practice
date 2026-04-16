@@ -5,7 +5,8 @@ import java.util.*;
 public class ProductExceptSelf {
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4};//right = [24, 12, 4, 1]
+        int[] nums = {1,2,3,4};//right = [24, 12, 8, 6]
+
 
         System.out.println(Arrays.toString(product(nums)));
     }

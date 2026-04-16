@@ -9,24 +9,26 @@ public class CharacterCount {
 
     void main(){
 
-        String s="aabbcccdd";//a2b2c3
+        String s="aabbccc";//a2b2c3
         System.out.println(getCh(s));
 
 
     }
 
-    public static String getCh(String s){
-        StringBuilder sb= new StringBuilder();
-        int count=1;
-        int n=s.length()-1;
-        for(int i=0;i<n;i++){
-            if(i+1<s.length()  && s.charAt(i)==s.charAt(i+1)){
+    public static String getCh(String s) {
+        if(s==null || s.length()==0) return "";
+        StringBuilder sb = new StringBuilder();
+        int count = 1;
+        for (int i = 1; i < s.length(); i++) {
+            if ( s.charAt(i) == s.charAt(i - 1)) {
                 count++;
-            }else {
-                sb.append(s.charAt(i)).append(count);
+            } else {
+                sb.append(s.charAt(i-1)).append(count);
                 count = 1;
             }
         }
+        sb.append(s.charAt(s.length()-1)).append(count);
+
         return sb.toString();
     }
 

@@ -2,7 +2,7 @@ package data.Arrays;
 
 public class MissingNumberInArray {
     void main(){
-        int[] arr={1,2,3,5};
+        int[] arr={1,2,3,5};//
         int n=5;
         System.out.println(missing(arr,n));
         System.out.println("==============");
@@ -17,7 +17,6 @@ public class MissingNumberInArray {
         int res=0;
         for(int a:arr)
             res +=a;
-
         return eSum-res;
     }
 
