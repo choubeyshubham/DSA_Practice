@@ -8,13 +8,13 @@ public class LongestSubstring {
     void main() {
 
         String s = "geeksforgeeks";
-        System.out.println(subString(s));
+        System.out.println(subString(s));//7
 
         String s2 = "bbbbb";
-        System.out.println("Input: " + s2 + ", Output: " + subString(s2)); // Output: 1
+        System.out.println( subString(s2)); // Output: 1
 
         String s3 = "pwwkew";
-        System.out.println("Input: " + s3 + ", Output: " + subString(s3)); // Output: 3
+        System.out.println( subString(s3)); // Output: 3
     }
 
 

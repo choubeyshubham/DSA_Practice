@@ -13,7 +13,7 @@ public class MergeInterval {
          */
 
 
-            int[][] interval = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};//[[1, 6], [8, 10], [15, 18]]
+        int[][] interval = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};//[[1, 6], [8, 10], [15, 18]]
 
         System.out.println(Arrays.deepToString(merge(interval)));
 
@@ -38,8 +38,6 @@ public class MergeInterval {
         result.add(new int[]{start, end});
         return result.toArray(new int[result.size()][]);
     }
-
-
 
 
 }

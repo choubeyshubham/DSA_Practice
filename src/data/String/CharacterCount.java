@@ -11,10 +11,7 @@ public class CharacterCount {
 
         String s="aabbccc";//a2b2c3
         System.out.println(getCh(s));
-
-
     }
-
     public static String getCh(String s) {
         if(s==null || s.length()==0) return "";
         StringBuilder sb = new StringBuilder();

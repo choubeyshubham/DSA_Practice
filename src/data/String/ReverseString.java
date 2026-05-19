@@ -1,33 +1,36 @@
 package data.String;
 
 public class ReverseString {
-    void main(){
+    void main() {
 
-        String s ="Shubham Choubey";
+        String s = "Shubham Choubey";
 
         System.out.println(reverse(s));
 
+        rev(s);
 
     }
 
     public static String reverse(String s){
-        char[] ch=s.toCharArray();
-
-        int left=0;
-        int right=s.length()-1;
-
-        while(left<right) {
-            char temp=ch[left];
-            ch[left]=ch[right];
-            ch[right]=temp;
-            left++;
-            right--;
+        String r="";
+        for(int i=0;i<s.length();i++){
+            r=s.charAt(i)+r;
         }
-        return new String(ch);
+
+        return r;
+    }
+
+    public static void rev(String s){
+        char[] ch=s.toCharArray();
+        for(int i=s.length()-1;i>=0 ;i--){
+            System.out.print(ch[i]);
+        }
+
     }
 
 
 
-
-
 }
+
+
+

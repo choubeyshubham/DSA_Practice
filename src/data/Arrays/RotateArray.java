@@ -6,13 +6,10 @@ public class RotateArray {
 
     void main(){
 
-        int[] arr={1, 2, 3, 4, 5, 6, 9,10,11,14,16};
-        int k=3;
-
-
-//        System.out.println(Arrays.toString(arr));
-
-//        rotateArray(arr,k);
+        int[] arr1={1, 2, 3, 4, 5, 6, 9,10,11,14,16};
+        int k1=3;
+        System.out.println(Arrays.toString(rotateArray(arr1,k1)));
+//
 
         int[] arr2={1,2,3,4,5};//[4, 5, 1, 2, 3]
         int k2=2;

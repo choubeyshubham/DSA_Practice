@@ -29,7 +29,6 @@ public class MissingNumberInDuplicateArray {
         return -1;
     }
 
-
     public static int miss(int[] arr){
         //Step 1: mark visited indices
         for(int i=0; i<arr.length;i++){
@@ -38,8 +37,6 @@ public class MissingNumberInDuplicateArray {
                 arr[index]=-arr[index];
             }
         }
-
-        //Step 2: Find index which is not marked
         for(int i=0;i<arr.length;i++){
             if(arr[i]>0){
                 return i+1;

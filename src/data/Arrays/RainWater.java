@@ -10,7 +10,7 @@ public class RainWater {
         System.out.println(container(arr2));
     }
 
-    public static int rainWaterTwoPointer(int[] arr) {
+    public static int container(int[] arr) {
         int left = 1;
         int right = arr.length - 2;
         int lmax = arr[left - 1];
@@ -30,25 +30,7 @@ public class RainWater {
         return res;
     }
 
-    public static int container(int[] arr){
-        int res=0;
-        int left=1;
-        int right=arr.length-2;
-        int lmax=arr[left-1];
-        int rmax=arr[right+1];
-        while(left<=right){
-            if(rmax<=lmax){
-                res +=Math.max(0,rmax-arr[right]);
-                rmax=Math.max(rmax,arr[right]);
-                right--;
-            }else{
-                res +=Math.max(0,lmax-arr[left]);
-                lmax=Math.max(lmax,arr[left]);
-                left++;
-            }
-        }
-        return res;
-    }
+
 
 }
 
