@@ -1,6 +1,5 @@
 package data.Tree;
 
-import data.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

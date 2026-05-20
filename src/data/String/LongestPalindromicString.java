@@ -4,7 +4,7 @@ public class LongestPalindromicString {
 
     void main() {
         String s = "forgeeksskeegfor";
-        System.out.println(palidromeSubString(s));
+        System.out.println(palidromeSubString(s));//geeksskeeg
     }
     public static String palidromeSubString(String s) {
         int n = s.length();

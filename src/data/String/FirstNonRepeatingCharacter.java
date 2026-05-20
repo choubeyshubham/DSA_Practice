@@ -8,7 +8,7 @@ public class FirstNonRepeatingCharacter {
 
     void main() {
 
-        String s = "geeksforgeeks";
+        String s = "geeksforgeeks";//f
 
         Character value = s.chars()
                 .mapToObj(c -> (char) c)
@@ -21,9 +21,9 @@ public class FirstNonRepeatingCharacter {
                 .orElse(null);
 
 
-        System.out.println(value);
-        System.out.println(method(s));
-//        System.out.println(s.charAt(firstUniqChar(s)));
+        System.out.println(value);//f
+        System.out.println(method(s));//f
+//        System.out.println(s.charAt(firstUniqChar(s)));//f
 
 
     }

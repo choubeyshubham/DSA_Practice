@@ -19,14 +19,9 @@ public class KthLargest {
 Time: O(n log n)
 Space: O(1)
  */
-    public static int findk(int[] arr,int k) {
-        Arrays.sort(arr);
-        return arr[arr.length - k];
-    }
-    /*
 
 
-     */
+
     public static int kth(int[] arr,int k){
         PriorityQueue<Integer> pq= new PriorityQueue<>();
         for(int a:arr){
@@ -37,14 +32,6 @@ Space: O(1)
     }
 
 
-    public static int kthInd(ArrayList<Integer> arr, int k){
-        int pivot=arr.get(new Random().nextInt(arr.size()));
-//        int
-
-        return 0;
-
-
-    }
 
 
 
