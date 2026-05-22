@@ -15,23 +15,6 @@ public class RearrangeCharactersByFrequency {
     }
 
 
-   /* public static String rearrange(String s) {
-        Map<Character, Integer> counts = new HashMap<>();
-        for (char c : s.toCharArray())
-            if (!counts.containsKey(c))
-                counts.put(c, counts.getOrDefault(c, 0) + 1);
-        PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> counts.get(b) - counts.get(b));
-        for (char c : counts.keySet())
-            maxHeap.add(c);
-        StringBuilder sb = new StringBuilder();
-        while (!maxHeap.isEmpty()) {
-            char c = maxHeap.poll();
-            int n = counts.get(c);
-            for (int i = 0; i < n; i++)
-                sb.append(c);
-        }
-        return sb.toString();
-    }*/
 
 
     public static String rearranges(String s) {
