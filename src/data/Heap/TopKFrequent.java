@@ -24,23 +24,17 @@ Note: If more than one element has same frequency then priorities the larger ele
 
     public static ArrayList<Integer> topKFreq(int[] arr, int k) {
         HashMap<Integer, Integer> mp = new HashMap<>();
-
         for (int val : arr)
             mp.put(val, mp.getOrDefault(val, 0) + 1);
-
-        PriorityQueue<int[]> pq = new PriorityQueue<>
-                ((a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
-
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
         for(Map.Entry<Integer, Integer> entry : mp.entrySet()) {
             pq.add(new int[]{entry.getValue(), entry.getKey()});
             if (pq.size() > k)
                 pq.poll();
         }
-
         ArrayList<Integer> res = new ArrayList<>();
-        while (!pq.isEmpty()) {
+        while (!pq.isEmpty())
             res.add(pq.poll()[1]);
-        }
         return res;
     }
 

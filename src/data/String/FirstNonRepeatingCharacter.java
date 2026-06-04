@@ -19,12 +19,8 @@ public class FirstNonRepeatingCharacter {
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .orElse(null);
-
-
         System.out.println(value);//f
         System.out.println(method(s));//f
-//        System.out.println(s.charAt(firstUniqChar(s)));//f
-
 
     }
     public int firstUniqChar(String s) {

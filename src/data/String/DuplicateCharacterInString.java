@@ -27,9 +27,6 @@ public class DuplicateCharacterInString {
 //                .forEach(System.out::print);
 
 
-        System.out.println();
-        System.out.println("=======");
-
     }
 
     public static void method(String s) {

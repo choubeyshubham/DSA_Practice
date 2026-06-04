@@ -6,21 +6,13 @@ public class IsValidBST {
 
 
     void main(){
-
         TreeNodes root = new TreeNodes(5);
-        root.left = new TreeNodes(8);
+        root.left = new TreeNodes(4);
         root.right = new TreeNodes(7);
-
         System.out.println(isValidBST(root));
-
-
-
-
-
     }
 
     public  boolean isValidBST(TreeNodes root){
-//        return isValid(root,Long.MIN_VALUE,Long.MAX_VALUE);
         return isValid(root,null,null);
     }
 
