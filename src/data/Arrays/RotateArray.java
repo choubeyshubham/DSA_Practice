@@ -4,38 +4,40 @@ import java.util.Arrays;
 
 public class RotateArray {
 
-    void main(){
+    void main() {
 
-        int[] arr1={1, 2, 3, 4, 5, 6, 9,10,11,14,16};
-        int k1=3;
-        System.out.println(Arrays.toString(rotateArray(arr1,k1)));
-//
+        int[] arr1 = {1, 2, 3, 4, 5, 6, 9, 10, 11, 14, 16};
+        int k1 = 3;
+        rotate(arr1, k1);
+        System.out.println(Arrays.toString(arr1));   //[11, 14, 16, 1, 2, 3, 4, 5, 6, 9, 10]
 
-        int[] arr2={1,2,3,4,5};//[4, 5, 1, 2, 3]
-        int k2=2;
-        System.out.println(Arrays.toString(rotateArray(arr2,k2)));
 
+
+        int[] arr2 = {1, 2, 3, 4, 5};//[4, 5, 1, 2, 3]
+        int k2 = 2;
+        rotate(arr2, k2);
 
 
     }
 
 
-    public static int[] rotateArray(int[] arr,int k){
-        k %= arr.length;
-        for(int i=0;i<k;i++){
-            int last=arr[arr.length-1];
-            for (int j=arr.length-1;j>0;j--){
-                arr[j]=arr[j-1];
-            }
-            arr[0]=last;
-        }
-        return arr;
+    public void rotate(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
     }
 
+    private void reverse(int[] nums, int l, int r) {
+        while (l < r)
+            swap(nums, l++, r--);
+    }
 
-
-
-
+    private void swap(int[] nums, int l, int r) {
+        final int temp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = temp;
+    }
 
 
 }
