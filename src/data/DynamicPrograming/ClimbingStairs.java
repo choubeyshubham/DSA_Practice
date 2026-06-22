@@ -1,6 +1,6 @@
 package data.DynamicPrograming;
 
-public class ClimbingStairs {
+public class    ClimbingStairs {
     /*
 📌 Problem
 
