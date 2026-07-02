@@ -28,10 +28,10 @@ public class ValidParenthsis {
         map.put('}', '{');
         map.put(']', '[');
         Stack<Character> st = new Stack<>();
-        for(char c:s.toCharArray()){
-            if(map.containsKey(c)){
-                if(map.isEmpty()||st.pop()!=map.get(c)) return false;
-            }else{
+        for (char c : s.toCharArray()) {
+            if (map.containsKey(c)) {
+                if (map.isEmpty() || st.pop() != map.get(c)) return false;
+            } else {
                 st.push(c);
             }
         }

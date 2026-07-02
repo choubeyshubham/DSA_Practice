@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class DuplicateCharacterInString {
+    public class DuplicateCharacterInString {
     /*
 
 

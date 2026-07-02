@@ -12,13 +12,9 @@ public class SellStock {
     public static int stock(int[] arr){
         int min=Integer.MAX_VALUE;
         int max=0;
-        for(int price:arr){
-            if(price<min){
-                min=price;
-            }else{
-                int profit=price-min;
-                max=Math.max(max,profit);
-            }
+        for(int a:arr){
+            if(a<min)  min=a;
+            else       max=Math.max(max,a-min);
         }
         return max;
     }
